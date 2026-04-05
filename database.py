@@ -145,7 +145,8 @@ print(f"Connecting to {DATABASE} database...")
 cur = conn.cursor(buffered=True)
 newDB = False
 cur.execute("SHOW DATABASES")
-if (DATABASE,) not in cur.fetchall():
+databases = [db[0].lower() for db in cur.fetchall()]
+if DATABASE.lower() not in databases:
     print(f"No database named {DATABASE} found. Creating Database...")
     createDB()
     newDB = True

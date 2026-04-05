@@ -63,7 +63,10 @@ def employee():
 def reservation():
     if request.method == 'POST':
         cust_ph_no = request.form['cust']
-        cust_id = int(database.source("get_customer.sql", cust_ph_no)[0][0])
+        cust_record = database.source("get_customer.sql", cust_ph_no)
+        if not cust_record:
+            return "Error: Customer not found. Please check the entered phone number or register the customer.", 404
+        cust_id = int(cust_record[0][0])
         room = int(request.form['room'])
         date_format = "%Y-%m-%d"
         in_date = datetime.strptime(request.form['in'], date_format)

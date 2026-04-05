@@ -5,12 +5,12 @@
         <form action="/reservation" method="post" class="bg-blue-100 px-16 py-8 rounded-lg shadow-md">
             <div>
                 Customer Details <br>
-                <input list="customers" name="cust" id="cust" placeholder="Customer Name" class="rounded-md border-[1px] border-gray-500 px-2 py-1 focus:border-blue-500 mb-4 mt-1 -ml-1">
-                <datalist id="customers">
+                <select name="cust" id="cust" class="bg-white px-2 py-1 rounded-md mb-4 mt-1 -ml-1 border-[1px] border-gray-500 focus:border-blue-500 w-full">
+                    <option value="" selected disabled hidden> Select Customer </option>
                     {% for cust in customer %}
-                        <option value="{{ cust[4] }}"> {{ cust[1] }} {{ cust[2] }}, {{ cust[4] }} </option>
+                        <option value="{{ cust[4] }}"> {{ cust[1] }} {{ cust[2] }} ({{ cust[4] }})</option>
                     {% endfor %}
-                </datalist>
+                </select>
             </div>
             <div>
                 <div class="flex justify-between mb-3">
