@@ -1,1 +1,1 @@
-SELECT cust_id FROM Customer WHERE cust_ph_no = %s;
+SELECT cust_id FROM customer WHERE cust_ph_no = %s;

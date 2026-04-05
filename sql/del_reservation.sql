@@ -1,1 +1,1 @@
-DELETE FROM Reservation WHERE res_id = %s;
+DELETE FROM reservation WHERE res_id = %s;

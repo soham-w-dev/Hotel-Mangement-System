@@ -1,4 +1,4 @@
-CREATE TABLE Customer(
+CREATE TABLE customer(
     cust_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     cust_fname VARCHAR(255),
     cust_lname VARCHAR(255),
@@ -6,7 +6,7 @@ CREATE TABLE Customer(
     cust_ph_no CHAR(10),
     status BOOLEAN);
 
-CREATE TABLE Reservation(
+CREATE TABLE reservation(
     res_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     cust_id INT,
     room_id INT,
@@ -15,19 +15,19 @@ CREATE TABLE Reservation(
     out_date DATETIME,
     days INT);
 
-CREATE TABLE Room(
+CREATE TABLE room(
     room_id INT PRIMARY KEY NOT NULL,
     type_id CHAR(3),
     description TEXT,
     price INT,
     occupancy_status BOOLEAN);
 
-CREATE TABLE Room_Type(
+CREATE TABLE room_type(
     type_id CHAR(3) PRIMARY KEY NOT NULL,
     name VARCHAR(255),
     capacity INT);
 
-CREATE TABLE Transactions(
+CREATE TABLE transactions(
     transaction_id VARCHAR(12) PRIMARY KEY NOT NULL,
     emp_id INT,
     res_id INT,
@@ -37,7 +37,7 @@ CREATE TABLE Transactions(
     type BOOLEAN,
     status TINYINT(1));
 
-CREATE TABLE Employees(
+CREATE TABLE employees(
     emp_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     job_id INT,
     emp_fname VARCHAR(255),
@@ -45,7 +45,7 @@ CREATE TABLE Employees(
     emp_address VARCHAR(255),
     emp_ph_no CHAR(10));
 
-CREATE TABLE Job(
+CREATE TABLE job(
     job_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     job_title VARCHAR(255),
     salary INT);

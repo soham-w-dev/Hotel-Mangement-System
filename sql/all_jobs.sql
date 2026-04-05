@@ -1,1 +1,1 @@
-SELECT * FROM Job;
+SELECT * FROM job;

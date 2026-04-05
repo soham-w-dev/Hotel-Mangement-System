@@ -1,1 +1,1 @@
-DELETE FROM Employees WHERE emp_id = %s;
+DELETE FROM employees WHERE emp_id = %s;

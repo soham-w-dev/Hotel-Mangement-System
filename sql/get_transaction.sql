@@ -1,1 +1,1 @@
-SELECT dated, amount, payment_mode, status FROM Transactions WHERE transaction_id = %s;
+SELECT dated, amount, payment_mode, status FROM transactions WHERE transaction_id = %s;

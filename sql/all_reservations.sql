@@ -1,1 +1,1 @@
-SELECT * FROM Reservation;
+SELECT * FROM reservation;
